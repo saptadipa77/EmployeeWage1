@@ -6,9 +6,11 @@ public class Main {
         DailyWage dw = new DailyWage();
         Parttime pt = new Parttime();
         int hours = ac.getWorkingHours();
+        Monthlywage mw = new Monthlywage();
         System.out.println("UC1 Attendance: " + ac.getAttendance());
         System.out.println("UC2 Daily Wage: " + dw.calculateDailyWage());
         System.out.println("UC3 Part-Time Wage: " + pt.calculatePartTimeWage());
         System.out.println("Working Hours Today: " + hours);
+        System.out.println("UC5 Monthly Wage: " + mw.calculateMonthlyWage());
     }
 }
