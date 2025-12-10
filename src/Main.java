@@ -7,10 +7,12 @@ public class Main {
         Parttime pt = new Parttime();
         int hours = ac.getWorkingHours();
         Monthlywage mw = new Monthlywage();
+        Conditionalwage cw = new Conditionalwage();
         System.out.println("UC1 Attendance: " + ac.getAttendance());
         System.out.println("UC2 Daily Wage: " + dw.calculateDailyWage());
         System.out.println("UC3 Part-Time Wage: " + pt.calculatePartTimeWage());
         System.out.println("Working Hours Today: " + hours);
         System.out.println("UC5 Monthly Wage: " + mw.calculateMonthlyWage());
+        System.out.println("UC6 Conditional Wage: " + cw.calculateConditionalWage());
     }
 }
