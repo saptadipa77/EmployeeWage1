@@ -5,8 +5,10 @@ public class Main {
         AttendanceCheck ac = new AttendanceCheck();
         DailyWage dw = new DailyWage();
         Parttime pt = new Parttime();
+        int hours = ac.getWorkingHours();
         System.out.println("UC1 Attendance: " + ac.getAttendance());
         System.out.println("UC2 Daily Wage: " + dw.calculateDailyWage());
         System.out.println("UC3 Part-Time Wage: " + pt.calculatePartTimeWage());
+        System.out.println("Working Hours Today: " + hours);
     }
 }
