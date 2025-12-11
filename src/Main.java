@@ -33,6 +33,10 @@ public class Main {
         builder.computeWages();
 
         System.out.println("\nQueried Wage:");
-        System.out.println("Infosys: " + builder.getTotalWage("Infosys"));
+        System.out.println("Total Wage for Tata: " + builder.getTotalWage("Tata"));
+        System.out.println("Daily Wage of Tata: " + builder.getDailyWages("Tata"));
+
+        System.out.println("\nTotal Wage for Infosys: " + builder.getTotalWage("Infosys"));
+        System.out.println("Daily Wage of Infosys: " + builder.getDailyWages("Infosys"));
     }
 }
