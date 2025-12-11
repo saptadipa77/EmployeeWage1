@@ -10,6 +10,10 @@ public class Main {
         // Using Class Method + Class Variables (Refactor)
         Refractor ref = new Refractor(20, 20, 100);
         int wage = ref.computeWage();
+        Company meta=new Company();
+        meta.setNoofworkdayspermonth(20);
+        meta.setNoofworkhourspermonth(200);
+        meta.setWageperhour(300);
         System.out.println("UC1 Attendance: " + ac.getAttendance());
         System.out.println("UC2 Daily Wage: " + dw.calculateDailyWage());
         System.out.println("UC3 Part-Time Wage: " + pt.calculatePartTimeWage());
@@ -17,5 +21,8 @@ public class Main {
         System.out.println("UC5 Monthly Wage: " + mw.calculateMonthlyWage());
         System.out.println("UC6 Conditional Wage: " + cw.calculateConditionalWage());
         System.out.println("Total Employee Wage (Refactored UC7): " + wage);
+        System.out.println("Meta's work days"+" "+meta.getNoofworkdayspermonth());
+        System.out.println("Meta's work hours"+" "+meta.getNoofworkhourspermonth());
+        System.out.println("Meta's wage per month"+" "+meta.getWageperhour());
     }
 }
