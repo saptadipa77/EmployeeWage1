@@ -14,6 +14,7 @@ public class Main {
         meta.setNoofworkdayspermonth(20);
         meta.setNoofworkhourspermonth(200);
         meta.setWageperhour(300);
+        empwagebuilder builder = new empwagebuilder();
         System.out.println("UC1 Attendance: " + ac.getAttendance());
         System.out.println("UC2 Daily Wage: " + dw.calculateDailyWage());
         System.out.println("UC3 Part-Time Wage: " + pt.calculatePartTimeWage());
@@ -24,5 +25,14 @@ public class Main {
         System.out.println("Meta's work days"+" "+meta.getNoofworkdayspermonth());
         System.out.println("Meta's work hours"+" "+meta.getNoofworkhourspermonth());
         System.out.println("Meta's wage per month"+" "+meta.getWageperhour());
+
+        builder.addCompany("Meta", 20, 20, 100);
+        builder.addCompany("Infosys", 25, 22, 120);
+        builder.addCompany("Walmart", 30, 25, 150);
+
+        builder.computeWages();
+
+        System.out.println("\nQueried Wage:");
+        System.out.println("Infosys: " + builder.getTotalWage("Infosys"));
     }
 }
