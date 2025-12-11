@@ -27,7 +27,7 @@ public class empwagebuilder implements Iwagecomputation {
 
         int totalHours = 0;
         int totalDays = 0;
-        int wage = 0;
+        int totalWage = 0;
 
         while (totalHours <= c.maxWorkingHours && totalDays < c.maxWorkingDays) {
             totalDays++;
@@ -47,11 +47,14 @@ public class empwagebuilder implements Iwagecomputation {
                     break;
             }
 
+            int dailyWage = empHours * c.empRatePerHour;
+            c.dailyWageList.add(dailyWage);  // UC13: store daily wage
+
             totalHours += empHours;
-            wage += empHours * c.empRatePerHour;
+            totalWage += dailyWage;
         }
 
-        return wage;
+        return totalWage;
     }
 
     @Override
@@ -62,6 +65,15 @@ public class empwagebuilder implements Iwagecomputation {
             }
         }
         return -1; // not found
+    }
+    @Override
+    public ArrayList<Integer> getDailyWages(String companyName) {
+        for (Compempwage c : companyList) {
+            if (c.companyName.equalsIgnoreCase(companyName)) {
+                return c.dailyWageList;
+            }
+        }
+        return null;
     }
 }
 

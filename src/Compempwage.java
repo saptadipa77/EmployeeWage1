@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Compempwage {
 
     public String companyName;
@@ -6,6 +8,7 @@ public class Compempwage {
     public int maxWorkingHours;
 
     public int totalWage;
+    public ArrayList<Integer> dailyWageList;
 
     public Compempwage(String companyName, int empRatePerHour,
                           int maxWorkingDays, int maxWorkingHours) {
@@ -14,6 +17,7 @@ public class Compempwage {
         this.empRatePerHour = empRatePerHour;
         this.maxWorkingDays = maxWorkingDays;
         this.maxWorkingHours = maxWorkingHours;
+        dailyWageList=new ArrayList<>();
     }
 
     public void setTotalWage(int totalWage) {
@@ -22,7 +26,9 @@ public class Compempwage {
 
     @Override
     public String toString() {
-        return "Total Employee Wage for Company " + companyName + " is: " + totalWage;
+        return "Compempwage{" +
+                "totalWage=" + totalWage +
+                '}';
     }
 }
 
